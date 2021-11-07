@@ -1,70 +1,75 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Git Hub Finder 
+ It is an application for finding a Git Hub User by its name or username.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Install this Project with npm
 
-### `npm test`
+```bash
+  npm install
+  
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## API Reference
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Get users by Name or Username:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```http
+https://api.github.com/search/users?q=${text}&client_id=${<YOUR GITHUB CLIENT_ID>}&client_secret={<YOUR GITHUB CLIENT_SECRET>}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Get user Repositories :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```http
+https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${<YOUR GITHUB CLIENT_ID>}&client_secret={<YOUR GITHUB CLIENT_SECRET>}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+##  Tech Stacks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React Js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    React helps you create your web applications in a more maintainable way.
+    React enables developer to reuse components.  
 
-### Code Splitting
+### Axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Axios is a library used in this project to make request to API ,return data form API , then do the things from that data.
+    It has good defaults to work with JSON data. Unlike alternatives such as the Fetch API, you often don't need to set your headers. Or perform tedious tasks like converting your request body to a JSON string.
+    Axios has function names that match any HTTP methods. To perform a GET request, you use the .get() method.
 
-### Analyzing the Bundle Size
+### React-Router
+    I have used React-Router for Routing in this web application which  enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+#### Components used from react-router-dom
+    1. BrowserRouter :- BrowserRouter is a router implementation that uses the HTML5 history API to keep your UI in sync with the URL. 
+                        It is the parent component that is used to store all of the other components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    2. Route :-         Route is the conditionally shown component that renders some UI when its path matches the current URL.  
 
-### Making a Progressive Web App
+    3. Switch :-         Switch component is used to render only the first route that matches the location rather than rendering all matching routes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    4. Link :-           Link component is used to create links to different routes and implement navigation around the application. It works like HTML anchor tag.
 
-### Advanced Configuration
+   
+##  Sample Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![image](https://user-images.githubusercontent.com/91049345/140654863-49b2b9fd-9871-4e33-b90e-4995defaced1.png)
 
-### Deployment
+### User List : 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![image](https://user-images.githubusercontent.com/91049345/140654920-3153ad9d-f6a1-4575-b039-366823e04ad9.png)
 
-### `npm run build` fails to minify
+### User Details : 
+![image](https://user-images.githubusercontent.com/91049345/140654956-f366bf2b-149b-416d-a68e-fae7453f560f.png)
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@rushikesh-mahamuni](https://github.com/rushikesh-mahamuni)
+
